@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Check out this image!" />
+    <meta property="og:description" content="A beautiful image to share on LinkedIn." />
+    <meta property="og:image" content="https://i.imgur.com/f9KtM7r.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:url" content="https://zarulh.github.io/linkedinimage/linkedinimage.html" />
+    <meta property="og:type" content="website" />
     <title>Share Image on LinkedIn</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-        button {
-            background-color: #0077b5;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #005983;
-        }
-    </style>
 </head>
 <body>
     <h1>Share This Image on LinkedIn</h1>
-    <img src="https://imgur.com/f9KtM7r" alt="Image to Share">
+    <img src="https://i.imgur.com/f9KtM7r.png" alt="Image to Share" style="max-width: 100%; height: auto;">
+    <p>Click the button below to share this image on LinkedIn.</p>
     <button onclick="shareOnLinkedIn()">Share on LinkedIn</button>
 
     <script>
         function shareOnLinkedIn() {
-            const imageUrl = encodeURIComponent('https://imgur.com/f9KtM7r');
-            const postUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${imageUrl}`;
+            const shareUrl = encodeURIComponent('https://zarulh.github.io/linkedinimage/linkedinimage.html');
+            const postUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
             window.open(postUrl, '_blank');
         }
     </script>
